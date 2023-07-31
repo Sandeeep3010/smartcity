@@ -1,0 +1,143 @@
+<app-adminpanel></app-adminpanel>
+
+<div class="main">
+    <h1 style="text-align:center;"><span>Reports</span></h1><br><br>
+ 
+  <div style="margin: 30px; float: left; width: 110px;margin-left:88px;">
+  <button  class="button" (click)="div3Function()">C.E. Students</button>
+  </div>
+  
+  <div style="margin: 30px; float: left; width: 100px;margin-left:80px;">
+  <button  class="button" (click)="div4Function()">Exam Result</button>
+  </div>
+  
+  <div style="margin: 30px; float: left; width: 80px;margin-left:80px;">
+  <button  class="button" (click)="div5Function()">Fees</button>
+  </div><br><br><br><br>
+
+
+
+
+  <div *ngIf="div3">
+    <div class="container" style="background-color:white; padding: 8px 15px 15px 15px; border-radius: 15px;width:1200px ;">
+      <h2 style="text-align:center;color: red;">Students Data</h2>
+          <table  cellspacing="15" style="width:100%" >
+          <tr>
+              <th>
+                 Roll No.
+              </th>
+              <th>
+                 First Name
+              </th>
+              <th>
+                 Last Name
+             </th>
+             <th>
+                 Gender
+              </th>
+             <th>
+                 Branch
+             </th>
+             <th>
+                 Year
+             </th>
+             <th>
+                 Sem
+            </th>
+             <th>
+                Mobile No.
+            </th>
+            <th>
+                Email address
+            </th>
+            <th>
+                Password
+            </th>
+          </tr>
+
+      
+          <tr *ngFor="let l of loginpages3">
+          
+              <td>{{l.id}}</td>
+              <td>{{l.firstname}}</td>
+              <td>{{l.lastname}}</td>
+              <td>{{l.gender}}</td>
+              <td>{{l.branch}}</td>
+              <td>{{l.year}}</td>
+              <td>{{l.sem}}</td>
+              <td>{{l.mobileno}}</td>
+              <td>{{l.email}}</td>
+              <td>{{l.password}}</td>
+    
+          </tr>
+  
+    </table>
+    </div>
+
+  </div>
+
+
+  <div *ngIf="div5">
+
+    <div class="container" style="background-color:white; padding: 8px 15px 15px 15px; border-radius: 15px;width:1200px ;">
+      <h2 style="text-align:center;color: red;">Fees Collection</h2>
+          <table  cellspacing="15" style="width:100%" >
+          <tr>
+              <th>
+                 Roll No.
+              </th>
+              <th>
+                 First Name
+              </th>
+              <th>
+                 Last Name
+             </th> 
+             <th>
+                 Branch
+              </th>
+             <th>
+                 Year
+             </th>
+             <th>
+                 Sem
+             </th>
+             <th>
+                 Mobile No.
+            </th>
+             <th>
+                 Payment Date
+             </th>
+             <th>
+                 Payment Mode
+             </th>
+             <th>
+                Fees Paid
+            </th>
+          </tr>
+  
+      
+          <tr *ngFor="let l of loginpages5">
+          
+              <td>{{l.id}}</td>
+              <td>{{l.firstname}}</td>
+              <td>{{l.lastname}}</td>
+              <td>{{l.branch}}</td>
+              <td>{{l.year}}</td>
+              <td>{{l.sem}}</td>
+              <td>{{l.mobileno}}</td>
+              <td>{{l.date}}</td>
+              <td>{{l.pmode}}</td>
+              <td>{{l.fees}}</td>
+          </tr>
+  
+    </table>
+    </div><br><br>
+  </div>
+
+
+
+</div>
+
+
+
+
